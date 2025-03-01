@@ -1,0 +1,124 @@
+*, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(177, 175, 175);
+}
+
+nav {
+    display: flex;
+    justify-content: right;
+    padding: 1rem 2rem;
+    background-color: rgb(224, 222, 222);
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    align-items: center;
+}
+   
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(245, 245, 245);
+    font-weight: 600;
+    padding: 4px 0;
+    transform: all;
+    transition: 0,75px;
+}
+   
+
+
+nav ul li a:hover {
+    border-bottom: 1px solid black;
+    color: red;
+}
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: 0,5rem;
+    color: rgb(245, 244, 244);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0,9rem;
+}
+
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: rgb(19, 18, 18);
+}
+
+.hero {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0,5rem 0 1rem;
+}
+
+.hero-name span {
+    color: rgb(231, 12, 12);
+}
+
+
+#service {
+    background-color: #818080;
+    padding: 6rem 0;
+}
+
+.service .pre-title {
+    margin: 0 auto;
+}
+
+.service-title {
+    text-align: center;
+    align-items: center;
+}
+
+.service-title {
+    margin: 1rem 0 4rem;
+    font-size: 4rem;
+}
+
+.pre-title {
+    align-items: center;
+}
+
+
+.section h4 {
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.card {
+    display: flex;
+    width: 325px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 20px;
+}
