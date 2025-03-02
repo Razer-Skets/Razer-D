@@ -4,82 +4,172 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primarytextcolor: #232e35;  /*untuk title atau judul */
+    --secondarytextcolor: #656d72; /*untuk text biasa seperti paragraph contohnya */
+    
+    --bordercolor: #f1f1f1; 
+    --linecolor: #d9d9d9; /*untuk line di pre-title*/
+
+    --primarybackgroundcolor:#fff; 
+    --secondarybackgroundcolor:#fbfbfb; 
+    --thirdbackgroundcolor:#f5f3fe;
+
+    --primaryiconcolor:#7e74f1;
+    --primaryiconcolorHover:#5d51e8;
+
+    --sectionpadding: 6rem 0;
+    
+    --itemBorderRadius:0.7rem;
+}
+
 body {
-    background-color: rgb(177, 175, 175);
+    font-family: "Roboto", sans-serif;
 }
 
-nav {
-    display: flex;
-    justify-content: right;
-    padding: 1rem 2rem;
-    background-color: rgb(224, 222, 222);
+h1,h2,h3,h4,h5,h6, strong {
+    color: var(--primarytextcolor);
 }
 
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
 
-nav ul {
+p, span, label, input, textarea, li {
+    color: var(--secondarytextcolor);
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:1200px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+/* logo and Navigation Menu */
+.nav {
     display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.nav ul {
     list-style: none;
-    gap: 1rem;
+    display: flex;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo a {
+    color: var(--primarytextcolor);
+}
+
+nav ul li {
+    display: flex;
     align-items: center;
 }
-   
 
 nav ul li a {
-    text-decoration: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:rgb(245, 245, 245);
-    font-weight: 600;
-    padding: 4px 0;
-    transform: all;
-    transition: 0,75px;
-}
-   
-
-
-nav ul li a:hover {
-    border-bottom: 1px solid black;
-    color: red;
+    color: var(--primarytextcolor);
 }
 
-.pre-title {
-    text-transform: uppercase;
-    letter-spacing: 0,5rem;
-    color: rgb(245, 244, 244);
-    position: relative;
-    padding-left: 40px;
-    width: fit-content;
-    font-weight: 400;
-    font-size: 0,9rem;
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 7px;
+    transition: all 0.3s;
+    z-index: 99;
 }
 
-.pre-title::before {
-    content: "";
-    width: 30px;
-    height: 1px;
-    background: rgb(19, 18, 18);
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
 }
 
-.hero {
+/* hero section */
+#hero {
     height: 720px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
 }
 
+/* title */
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: var(--secondarytextcolor);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: var(--linecolor);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+/* layout */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
 .hero-name {
     font-size: 3rem;
     font-weight: 700;
-    margin: 0,5rem 0 1rem;
+    margin: 0.5rem 0 1rem;
 }
 
 .hero-name span {
-    color: rgb(231, 12, 12);
+    color: var(--primaryiconcolor);
 }
 
+.hero-right img {
+    width: 90%;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
 
 #service {
-    background-color: #818080;
-    padding: 6rem 0;
+    background-color: var(--secondarybackgroundcolor);
+    padding: var(--sectionpadding);
 }
 
 .service .pre-title {
@@ -87,38 +177,6 @@ nav ul li a:hover {
 }
 
 .service-title {
-    text-align: center;
-    align-items: center;
+   text-align: center; 
 }
 
-.service-title {
-    margin: 1rem 0 4rem;
-    font-size: 4rem;
-}
-
-.pre-title {
-    align-items: center;
-}
-
-
-.section h4 {
-    align-items: center;
-    justify-content: center;
-}
-
-.card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 100px;
-}
-
-.card {
-    display: flex;
-    width: 325px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-    margin: 20px;
-}
