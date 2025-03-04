@@ -84,6 +84,11 @@ nav ul li {
     align-items: center;
 }
 
+nav ul li :hover {
+    border-bottom: 1px solid black;
+    color: red;
+}
+
 nav ul li a {
     color: var(--primarytextcolor);
 }
@@ -180,3 +185,32 @@ nav ul li a {
    text-align: center; 
 }
 
+.card-container {
+    display: grid;
+    justify-content: right;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.card {
+    width: 2025;
+    background-color: #070707;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 20px;
+}
+
+.card {
+    width: 100px;
+    height: auto;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.service, h4, p {
+    align-items: center;
+    justify-content: center;
+}
